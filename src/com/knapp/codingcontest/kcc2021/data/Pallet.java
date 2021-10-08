@@ -89,7 +89,7 @@ public abstract class Pallet implements Serializable {
     private final int y;
     private final boolean rotated;
 
-    protected PacketPos(final int x, final int y, final boolean rotated) {
+    public PacketPos(final int x, final int y, final boolean rotated) {
       this.x = x;
       this.y = y;
       this.rotated = rotated;
