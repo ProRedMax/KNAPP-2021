@@ -63,7 +63,7 @@ public class Solution {
     public void run() throws Exception {
         // TODO: make calls to API (see below)
 
-        boolean extracted = false;
+        boolean extracted;
 
         while (packetIterator.hasNext()) {
             extracted = false;
@@ -134,7 +134,7 @@ public class Solution {
                     return new PacketPos(entry.getValue(), entry.getKey(), false);
                 }
                 if (entry.getKey() == packetLength.size() - 1 && packet.getWidth() + entry.getKey() + 1 <= pallet.getType().getWidth() - packetLength.size()  && packet.getLength() <= pallet.getType().getLength()) {
-                    return new PacketPos(0, entry.getKey() + 1, false);
+                    return new PacketPos(0, entry.getKey() + 3, false);
                 }
             }
         }
